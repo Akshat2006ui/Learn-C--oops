@@ -1,0 +1,49 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+class Student
+{
+
+    private:
+    string student_Name;
+    int roll_no;
+    string college_name;
+    string branch_name;
+    int yearof_passing;
+
+    public:
+    void getdata()
+    {
+        cout<<"\nEnter Student name:\n";
+        getline(cin,student_Name);
+        cout<<"\nEnter The roll_no:\n";
+        cin>>roll_no;
+        cin.ignore();
+        cout<<"\nEnter The College name:\n";
+        getline(cin,college_name);
+        cout<<"\nEnter the branch name:\n";
+        getline(cin,branch_name);
+        cout<<"\nEnter the year of passing:\n";
+        cin>>yearof_passing;
+        cin.ignore();
+
+    }
+    void showdata()
+    {
+        cout<<"\nDETAILS OF STUDENT IS AS FOLLOWS:\n";
+        cout<<"----------------------------------\n";
+        cout<<"Student name is:\n"<<student_Name<<"\n";
+        cout<<"Roll number is:\n"<<roll_no<<"\n";
+        cout<<"College name is:\n"<<college_name<<"\n";
+        cout<<"Branch name is:\n"<<branch_name<<"\n";
+        cout<<"Year of passing is:\n"<<yearof_passing<<"\n";
+    }
+};
+    int main()
+    {
+        Student S;
+        S.getdata();
+        S.showdata();
+        return 0;
+    }
+
